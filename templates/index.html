@@ -57,32 +57,47 @@
       overflow: hidden !important;
     }
 
-    /* Modal Styles - Updated for blurry white background and proper centering */
+    /* Modal Styles - Elegant white fade background with clear white popup */
     #variation-modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      z-index: 999999 !important;
+      display: none !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: rgba(255, 255, 255, 0.95) !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
     }
 
     #variation-modal .bg-white {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      max-width: 500px;
-      width: 90%;
-      max-height: 80vh;
-      overflow-y: auto;
-      position: relative;
-      margin: 0 auto;
+      background: #FFFFFF !important;
+      border-radius: 12px !important;
+      border: none !important;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.8) !important;
+      max-width: 600px !important;
+      width: 95% !important;
+      max-height: 90vh !important;
+      overflow-y: auto !important;
+      position: relative !important;
+      margin: 0 auto !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+    
+    /* Override any hidden class */
+    #variation-modal.hidden {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
     }
 
     /* Toast */
@@ -552,9 +567,9 @@
   <div class="bg-white rounded-xl shadow-xl max-w-md w-full p-6 relative mx-4">
     <!-- Close Button (top right) -->
     <button id="close-modal"
-            class="absolute top-2 right-2 text-gray-400 hover:text-gray-700 text-xl font-bold"
+            class="absolute top-2 right-2 bg-gray-200 text-gray-600 text-xl font-bold px-3 py-1 rounded-full hover:bg-gray-300 transition-colors"
             aria-label="Close">
-      &times;
+      ×
     </button>
     <!-- Title -->
     <h2 class="font-semibold text-lg mb-4 text-gray-800">Claim Variations</h2>
@@ -568,6 +583,8 @@
   </div>
 </div>
 
+
+
 <script>
   // -------------------------- TOAST --------------------------
   function toast(msg) {
@@ -576,6 +593,10 @@
     t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2500);
   }
+
+
+
+
 
   // -------------------------- UTIL --------------------------
   function updateLastSync() {
@@ -708,23 +729,44 @@ function capitalizeFirst(str) {
 
 function showVariationModal(variations) {
   console.log('showVariationModal called with:', variations);
-  document.body.classList.add("modal-open");
+  
   const modal = document.getElementById("variation-modal");
   console.log('Modal element:', modal);
   
   if (!modal) {
     console.error('Modal element not found!');
+    alert('Modal element not found!');
     return;
   }
   
-  modal.classList.remove("hidden");
-  modal.style.display = "flex";
+  // Force modal to be visible with maximum priority
+  modal.style.cssText = `
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 999999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  `;
   
-  // Store all variations and current start index on the modal DOM node
+  // Remove any hidden class
+  modal.classList.remove("hidden");
+  
+  // Store variations
   modal._allVariations = variations;
   modal._variationStart = 0;
   
   console.log('Modal should be visible now');
+  
   renderModalVariations();
 }
 
@@ -755,7 +797,18 @@ function renderModalVariations() {
 function closeModal() {
   const modal = document.getElementById("variation-modal");
   modal.classList.add("hidden");
-  modal.style.display = "none";
+  modal.style.cssText = `
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: -1 !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  `;
   document.body.classList.remove("modal-open");
 }
 
@@ -773,6 +826,7 @@ function setupViewVariationsButtons() {
       const resp = await fetch(`/get-variations?claim=${encodeURIComponent(claim)}`);
       const data = await resp.json();
       console.log('Response data:', data);
+      
       if (data.variations && data.variations.length) {
         showVariationModal(data.variations);
       } else {

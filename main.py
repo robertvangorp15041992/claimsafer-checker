@@ -98,7 +98,7 @@ print("MAIL_SSL_TLS:", os.getenv("MAIL_SSL_TLS"))
 # ----------------------------------------------------
 # Load CSV
 # ----------------------------------------------------
-csv_path = os.getenv("CSV_FILE_PATH", "Masterfile claims with categories - Masterfile claims with categories.csv.csv")
+csv_path = os.getenv("CSV_FILE_PATH", "masterfile_claims.csv")
 print(f"🔍 Looking for CSV file at: {csv_path}")
 print(f"📁 Current working directory: {os.getcwd()}")
 print(f"📋 Files in current directory: {os.listdir('.')}")
@@ -110,9 +110,9 @@ if os.getenv("RAILWAY_ENVIRONMENT"):
     if not os.path.exists(csv_path):
         # Try alternative paths
         alt_paths = [
-            "./Masterfile claims with categories - Masterfile claims with categories.csv.csv",
-            "/app/Masterfile claims with categories - Masterfile claims with categories.csv.csv",
-            "Masterfile claims with categories - Masterfile claims with categories.csv.csv"
+            "./masterfile_claims.csv",
+            "/app/masterfile_claims.csv",
+            "masterfile_claims.csv"
         ]
         for alt_path in alt_paths:
             if os.path.exists(alt_path):
@@ -142,7 +142,7 @@ try:
     print(f"📊 DataFrame columns: {list(df.columns)}")
     
     # Clean the data
-    df = df.applymap(lambda v: v.strip().strip('"') if isinstance(v, str) else v)
+    df = df.map(lambda v: v.strip().strip('"') if isinstance(v, str) else v)
     
     print(f"🎯 Sample data - first 3 rows:")
     print(df.head(3).to_string())
@@ -207,15 +207,26 @@ except Exception as e:
     GPT_LOOKUP = {}
 
 def get_variations_for_claim(claim: str):
+    # Check if this is a nutrient-based claim (e.g., "Calcium contributes to...")
+    nutrient = None
+    if " contributes to " in claim:
+        nutrient = claim.split(" contributes to ")[0].strip()
+    
     claim_norm = claim.lower().strip()
     if claim_norm in GPT_LOOKUP:
         variations = GPT_LOOKUP[claim_norm]
-        return variations if variations else []
+        if variations:
+            # Don't add nutrient prefix if variations already contain the nutrient
+            return variations
+        return []
     
     best_match, score, _ = process.extractOne(claim_norm, GPT_LOOKUP.keys())
     if score > 80 and best_match:
         variations = GPT_LOOKUP[best_match]
-        return variations if variations else []
+        if variations:
+            # Don't add nutrient prefix if variations already contain the nutrient
+            return variations
+        return []
     
     return []
 
@@ -441,16 +452,29 @@ def render_claim_card_collapsible(title, claims, dosage, idx, add_rewrite=True, 
     # Build the claims HTML as a list
     claims_html = ""
     for c in claims:
-        claims_html += f"""
-        <li data-claim="{escape(c)}" data-section="allowed" class="mb-2 block">
-            <div class="flex items-start gap-2 flex-wrap w-full">
-                <span class="flex-1">{escape(c).capitalize()}</span>
+        # Only show View Variations button for actual health claims, not placeholder text
+        is_placeholder = c.lower().strip() in [
+            "no authorised claims", "no claims", "no authorized claims", 
+            "pending", "pending approval", "under review", "not applicable",
+            "n/a", "none", "no data", "no information"
+        ]
+        
+        variations_button = ""
+        if not is_placeholder:
+            variations_button = f"""
                 <button type="button"
                         class="view-variations-btn flex items-center gap-1 px-3 py-1 rounded-full bg-indigo-100 text-[#4F46E5] font-medium text-xs hover:bg-indigo-200 transition"
                         data-claim="{escape(c)}" title="View Variations">
                     <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" fill="none" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>
                     View Variations
                 </button>
+            """
+        
+        claims_html += f"""
+        <li data-claim="{escape(c)}" data-section="allowed" class="mb-2 block">
+            <div class="flex items-start gap-2 flex-wrap w-full">
+                <span class="flex-1">{escape(c).capitalize()}</span>
+                {variations_button}
                 <div class="claim-variations ml-2"></div>
             </div>
         </li>
@@ -602,9 +626,12 @@ async def search_by_ingredient(ingredient: str = Form(...), country: str = Form(
                 status_code=200
             )
         
-        # Get all rows for this ingredient across all countries
-        matches = df[df["Ingredient"].str.lower() == ingredient.lower()]
-        print(f"🎯 Found {len(matches)} matches for ingredient '{ingredient}'")
+        # Get rows for this ingredient in the SELECTED country only
+        matches = df[
+            (df["Ingredient"].str.lower() == ingredient.lower()) & 
+            (df["Country"].str.lower() == country.lower())
+        ]
+        print(f"🎯 Found {len(matches)} matches for ingredient '{ingredient}' in country '{country}'")
         
         if matches.empty:
             # Let's see what ingredients are available
@@ -665,77 +692,69 @@ async def search_by_ingredient(ingredient: str = Form(...), country: str = Form(
                 status_code=200
             )
 
-        # Group by country and create sections for each country
-        country_groups = matches.groupby('Country')
-        parts = [f"<h2 class='text-2xl font-bold text-gray-800 mb-6'>{ingredient} — All Countries</h2>"]
+        # Since we're only showing one country, collect data directly
+        country_claims = []
+        country_dosages = set()
+        country_pending = ""
+        country_notes = ""
+        country_categories = set()
         
-        for country, country_data in country_groups:
-            # Get country-specific data
-            country_claims = []
-            country_dosages = set()  # Use set to avoid duplicates
-            country_pending = ""
-            country_notes = ""
-            country_categories = set()
+        for _, row in matches.iterrows():
+            # Collect claims for this country
+            claim = row.get("Claim", "")
+            if claim and str(claim).strip() and str(claim).strip() != "nan":
+                country_claims.append(str(claim).strip())
             
-            for _, row in country_data.iterrows():
-                # Collect claims for this country
-                claim = row.get("Claim", "")
-                if claim and str(claim).strip() and str(claim).strip() != "nan":
-                    country_claims.append(str(claim).strip())
-                
-                # Get country-specific dosage
-                dosage = row.get("Dosage", "")
-                if dosage and str(dosage).strip() and str(dosage).strip() != "nan":
-                    country_dosages.add(str(dosage).strip())
-                
-                # Get country-specific pending claims
-                pending = row.get("Health claim pending European authorisation", "")
-                if pending and str(pending).strip() and str(pending).strip() != "nan":
-                    country_pending = str(pending).strip()
-                
-                # Get country-specific notes
-                notes = row.get("Claim Use Notes", "")
-                if notes and str(notes).strip() and str(notes).strip() != "nan":
-                    country_notes = str(notes).strip()
-                
-                # Get country-specific categories
-                category = row.get("Categories", "")
-                if category and str(category).strip() and str(category).strip() != "nan":
-                    country_categories.add(str(category).strip())
+            # Get country-specific dosage
+            dosage = row.get("Dosage", "")
+            if dosage and str(dosage).strip() and str(dosage).strip() != "nan":
+                country_dosages.add(str(dosage).strip())
             
-            # Format categories for this country
-            formatted_categories_html = "N/A"
-            if country_categories:
-                category_tags = []
-                for cat in sorted(country_categories):
-                    category_tags.append(f'<span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full mr-2 mb-2">{cat}</span>')
-                formatted_categories_html = "".join(category_tags)
+            # Get country-specific pending claims
+            pending = row.get("Health claim pending European authorisation", "")
+            if pending and str(pending).strip() and str(pending).strip() != "nan":
+                country_pending = str(pending).strip()
             
-            # Format dosages for this country
-            country_dosage_text = ""
-            if country_dosages:
-                dosage_list = sorted(list(country_dosages))
-                country_dosage_text = "\n".join(dosage_list)
+            # Get country-specific notes
+            notes = row.get("Claim Use Notes", "")
+            if notes and str(notes).strip() and str(notes).strip() != "nan":
+                country_notes = str(notes).strip()
             
-            # Create country-specific sections
-            country_parts = [
-                f"<h3 class='text-xl font-semibold text-gray-700 mb-4'>{country}</h3>",
-                section("Claim Category", formatted_categories_html, icon_claim_category),
-                render_claim_card_collapsible(
-                    "Allowed Claims",
-                    country_claims,
-                    "",  # Remove dosage from Allowed Claims container
-                    1,
-                    add_rewrite=True,
-                    icon_html=icon_allowed_claims
-                ),
-                section("Dosage", country_dosage_text, icon_dosage),
-                section("Health Claim Pending European Authorisation", country_pending, icon_pending),
-                section("Claim Use Notes", country_notes, icon_notes),
-            ]
-            
-            parts.extend(country_parts)
-            parts.append("<hr class='my-8 border-gray-200'>")  # Separator between countries
+            # Get country-specific categories
+            category = row.get("Categories", "")
+            if category and str(category).strip() and str(category).strip() != "nan":
+                country_categories.add(str(category).strip())
+        
+        # Format categories for this country
+        formatted_categories_html = "N/A"
+        if country_categories:
+            category_tags = []
+            for cat in sorted(country_categories):
+                category_tags.append(f'<span class="inline-block bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full mr-2 mb-2">{cat}</span>')
+            formatted_categories_html = "".join(category_tags)
+        
+        # Format dosages for this country
+        country_dosage_text = ""
+        if country_dosages:
+            dosage_list = sorted(list(country_dosages))
+            country_dosage_text = "\n".join(dosage_list)
+        
+        # Create the result HTML for the selected country only
+        parts = [
+            f"<h2 class='text-2xl font-bold text-gray-800 mb-6'>{ingredient} — {country}</h2>",
+            section("Claim Category", formatted_categories_html, icon_claim_category),
+            render_claim_card_collapsible(
+                "Allowed Claims",
+                country_claims,
+                "",  # Remove dosage from Allowed Claims container
+                1,
+                add_rewrite=True,
+                icon_html=icon_allowed_claims
+            ),
+            section("Dosage", country_dosage_text, icon_dosage),
+            section("Health Claim Pending European Authorisation", country_pending, icon_pending),
+            section("Claim Use Notes", country_notes, icon_notes),
+        ]
 
         html_content = "<div class='space-y-6'>" + "".join(parts) + "</div>"
         return HTMLResponse(html_content, status_code=200)
