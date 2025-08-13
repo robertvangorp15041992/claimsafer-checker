@@ -746,13 +746,20 @@ async def search_by_ingredient(ingredient: str = Form(...), country: str = Form(
             dosage_list = sorted(list(country_dosages))
             country_dosage_text = "\n".join(dosage_list)
         
+        # Process claims to split them properly
+        processed_claims = []
+        for claim in country_claims:
+            # Split each claim by newlines and add individual claims
+            split_individual_claims = split_claims(claim)
+            processed_claims.extend(split_individual_claims)
+        
         # Create the result HTML for the selected country only
         parts = [
             f"<h2 class='text-2xl font-bold text-gray-800 mb-6'>{ingredient} — {country}</h2>",
             section("Claim Category", formatted_categories_html, icon_claim_category),
             render_claim_card_collapsible(
                 "Allowed Claims",
-                country_claims,
+                processed_claims,
                 "",  # Remove dosage from Allowed Claims container
                 1,
                 add_rewrite=True,
