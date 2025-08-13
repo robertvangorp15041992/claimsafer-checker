@@ -453,11 +453,16 @@ def render_claim_card_collapsible(title, claims, dosage, idx, add_rewrite=True, 
     claims_html = ""
     for c in claims:
         # Only show View Variations button for actual health claims, not placeholder text
-        is_placeholder = c.lower().strip() in [
+        claim_lower = c.lower().strip()
+        placeholder_phrases = [
             "no authorised claims", "no claims", "no authorized claims", 
             "pending", "pending approval", "under review", "not applicable",
-            "n/a", "none", "no data", "no information"
+            "n/a", "none", "no data", "no information", "on hold",
+            "rejected", "not approved", "no efsa evaluation"
         ]
+        
+        # Check if claim starts with or contains any placeholder phrase
+        is_placeholder = any(phrase in claim_lower for phrase in placeholder_phrases)
         
         variations_button = ""
         if not is_placeholder:
