@@ -545,7 +545,9 @@ def get_lexicon():
             for main_category in main_categories:
                 if main_category:
                     # Find all rows that contain this main category
-                    matching_rows = df[df["Categories"].str.contains(main_category, case=False, na=False)]
+                    # Escape regex special characters to prevent regex errors
+                    escaped_category = re.escape(main_category)
+                    matching_rows = df[df["Categories"].str.contains(escaped_category, case=False, na=False)]
                     keywords = []
                     
                     # Check if Category_Keywords column exists
