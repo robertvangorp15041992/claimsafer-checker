@@ -450,6 +450,9 @@ def render_claim_card_collapsible(title, claims, dosage, idx, add_rewrite=True, 
         """
 
     # Build the claims HTML as a list
+    print(f"🔍 DEBUG: render_claim_card_collapsible received {len(claims)} claims")
+    for i, c in enumerate(claims):
+        print(f"🔍 DEBUG: Processing claim {i}: {c[:50]}...")
     claims_html = ""
     for c in claims:
         # Only show View Variations button for actual health claims, not placeholder text
@@ -748,10 +751,17 @@ async def search_by_ingredient(ingredient: str = Form(...), country: str = Form(
         
         # Process claims to split them properly
         processed_claims = []
-        for claim in country_claims:
+        print(f"🔍 DEBUG: Processing {len(country_claims)} claims")
+        for i, claim in enumerate(country_claims):
+            print(f"🔍 DEBUG: Original claim {i}: {repr(claim[:100])}...")
             # Split each claim by newlines and add individual claims
             split_individual_claims = split_claims(claim)
+            print(f"🔍 DEBUG: Split into {len(split_individual_claims)} individual claims")
+            for j, individual_claim in enumerate(split_individual_claims):
+                print(f"🔍 DEBUG: Individual claim {j}: {individual_claim[:50]}...")
             processed_claims.extend(split_individual_claims)
+        
+        print(f"🔍 DEBUG: Final processed claims count: {len(processed_claims)}")
         
         # Create the result HTML for the selected country only
         parts = [
