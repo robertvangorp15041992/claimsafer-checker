@@ -1,6 +1,6 @@
 [
   {
-    "Ingredient": "Cat’s Claw (Uncaria tomentosa)",
+    "Ingredient": "Cat\u2019s Claw (Uncaria tomentosa)",
     "Original": "Contributes to the immune system.",
     "Variations": [
       "1. Supports normal immune system function.",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "Ingredient": "Cat’s Claw (Uncaria tomentosa)",
+    "Ingredient": "Cat\u2019s Claw (Uncaria tomentosa)",
     "Original": "Helps to maintain flexible joints.",
     "Variations": [
       "1. Supports joint flexibility",
@@ -225,7 +225,7 @@
   },
   {
     "Ingredient": "Chamomile (Matricaria recutita)",
-    "Original": "Contributes to the natural defences of the body - support of the body´s defence - supports the immune system.",
+    "Original": "Contributes to the natural defences of the body - support of the body\u00b4s defence - supports the immune system.",
     "Variations": [
       "1. Supports the body's natural defense mechanisms.",
       "2. Aids in maintaining the body's defense system.",
@@ -913,7 +913,7 @@
   },
   {
     "Ingredient": "Dandelion (Taraxacum officinale)",
-    "Original": "Sustains the body’s detoxification by stimulation of diuresis.",
+    "Original": "Sustains the body\u2019s detoxification by stimulation of diuresis.",
     "Variations": [
       "1. Supports the body's natural detox process through increased urine production.",
       "2. Facilitates detoxification by promoting diuresis in the body.",
@@ -993,7 +993,7 @@
   },
   {
     "Ingredient": "Echinacea (Echinacea purpurea)",
-    "Original": "Contribute to the proper function of the body´s defensive system",
+    "Original": "Contribute to the proper function of the body\u00b4s defensive system",
     "Variations": [
       "1. Support the body's natural defense system",
       "2. Aid in maintaining the body's immune function",
@@ -1169,7 +1169,7 @@
   },
   {
     "Ingredient": "Elderberry (Sambucus nigra)",
-    "Original": "Support of the body´s defence / Helps to support the immune system",
+    "Original": "Support of the body\u00b4s defence / Helps to support the immune system",
     "Variations": [
       "1. \"Aids in maintaining the body's natural defense mechanisms\"",
       "2. \"Contributes to the normal functioning of the immune system\"",
@@ -1345,7 +1345,7 @@
   },
   {
     "Ingredient": "Eleutherococcus senticosus (Siberian Ginseng)",
-    "Original": "valid and efficient help during the cool season / relief for the throat – helps the upper respiratory tract.",
+    "Original": "valid and efficient help during the cool season / relief for the throat \u2013 helps the upper respiratory tract.",
     "Variations": [
       "1. Supports respiratory health during colder months, especially for throat discomfort.",
       "2. Aids in maintaining upper respiratory health amidst seasonal changes.",
@@ -1377,7 +1377,7 @@
   },
   {
     "Ingredient": "Eleutherococcus senticosus (Siberian Ginseng)",
-    "Original": "Support of the body´s defence / contributes to the / supports the immune system.",
+    "Original": "Support of the body\u00b4s defence / contributes to the / supports the immune system.",
     "Variations": [
       "1. \"Aids in maintaining the body's natural defenses.\"",
       "2. \"Assists in supporting the immune system.\"",
@@ -1537,7 +1537,7 @@
   },
   {
     "Ingredient": "Eleutherococcus senticosus (Siberian Ginseng)",
-    "Original": "Supports the immune system and the body’s defence (antioxidant).",
+    "Original": "Supports the immune system and the body\u2019s defence (antioxidant).",
     "Variations": [
       "1. Helps maintain a healthy immune system and antioxidant defenses.",
       "2. Supports the body's natural defense mechanisms, including antioxidants.",
@@ -2609,7 +2609,7 @@
   },
   {
     "Ingredient": "Holy Basil / Tulsi (Ocimum sanctum)",
-    "Original": "Bien être",
+    "Original": "Bien \u00eatre",
     "Variations": [
       "1. Supports overall well-being",
       "2. Contributes to a healthy lifestyle",
@@ -2641,7 +2641,7 @@
   },
   {
     "Ingredient": "Holy Basil / Tulsi (Ocimum sanctum)",
-    "Original": "Aide à maintenir un bon sommeil",
+    "Original": "Aide \u00e0 maintenir un bon sommeil",
     "Variations": [
       "1. Contributes to supporting a healthy sleep pattern",
       "2. Supports the maintenance of a good night's sleep",
@@ -2988,7 +2988,7 @@
       "7. Helps promote relaxation and reduce tension",
       "8. Plays a role in decreasing feelings of tenseness",
       "9. Supports the body in managing tension levels",
-      "10. Contributes to a reduction in tension感"
+      "10. Contributes to a reduction in tension\u611f"
     ]
   },
   {
@@ -3393,7 +3393,7 @@
   },
   {
     "Ingredient": "Maca (Lepidium meyenii)",
-    "Original": "Pomaga w zachowaniu naturalnej aktywności seksualnej i energii",
+    "Original": "Pomaga w zachowaniu naturalnej aktywno\u015bci seksualnej i energii",
     "Variations": [
       "1. Supports maintaining natural sexual activity and energy levels",
       "2. Contributes to the preservation of natural sexual activity and energy",
@@ -4017,7 +4017,7 @@
   },
   {
     "Ingredient": "Oregano (Origanum vulgare)",
-    "Original": "For the maintenance of women's health — for the health of breast and maintenance of a normal lacteal gland function",
+    "Original": "For the maintenance of women's health \u2014 for the health of breast and maintenance of a normal lacteal gland function",
     "Variations": [
       "1. Supports women's health by promoting breast health and normal lacteal gland function.",
       "2. Contributes to women's health by supporting breast health and lacteal gland function.",
@@ -4171,7 +4171,7 @@
       "6. Contributes to immune system health",
       "7. Supports the body's immune defenses",
       "8. Helps to sustain immune system function",
-      "9. Aids in the body’s natural immune response",
+      "9. Aids in the body\u2019s natural immune response",
       "10. Contributes to the normal functioning of the immune system."
     ]
   },
@@ -5376,7 +5376,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "A generally restorative product for those who wish to suppress the addiction",
     "Variations": [
       "1. Supports individuals seeking to manage addictive behaviors.",
@@ -5392,7 +5392,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "including smoking addiction",
     "Variations": [
       "1. Supports individuals with smoking addiction",
@@ -5408,8 +5408,8 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
-    "Original": "A generally restorative product for the maintenance of body's functions — strengthens the immunity",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
+    "Original": "A generally restorative product for the maintenance of body's functions \u2014 strengthens the immunity",
     "Variations": [
       "1. Supports overall wellness by promoting immune function",
       "2. Helps maintain the body's natural defense mechanisms",
@@ -5424,7 +5424,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "improves the state of cardiovascular system",
     "Variations": [
       "1. Supports cardiovascular health",
@@ -5440,7 +5440,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "tones up the body",
     "Variations": [
       "1. Supports body toning",
@@ -5456,7 +5456,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "stimulates mental work capacities",
     "Variations": [
       "1. Supports cognitive function",
@@ -5472,7 +5472,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "increases body's adaptation in extreme and stressful situations",
     "Variations": [
       "1. Supports the body's resilience in challenging conditions",
@@ -5488,7 +5488,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Contains herbs with body strengthening and restorative properties",
     "Variations": [
       "1. \"Formulated with herbs known for their body-strengthening and restorative properties\"",
@@ -5504,7 +5504,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Contains herbs with sweat-promoting",
     "Variations": [
       "1. \"Includes botanical ingredients that support perspiration\"",
@@ -5520,7 +5520,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "body strengthening and purifying properties",
     "Variations": [
       "1. Supports body strength and purification processes",
@@ -5536,7 +5536,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Contributes to emotional balance",
     "Variations": [
       "1. Supports emotional equilibrium",
@@ -5552,7 +5552,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Contributes to optimal relaxation",
     "Variations": [
       "1. Supports relaxation",
@@ -5568,7 +5568,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Helps to support the relaxation",
     "Variations": [
       "1. Contributes to promoting relaxation",
@@ -5584,7 +5584,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Helps to maintain a healthy sleep",
     "Variations": [
       "1. Supports the maintenance of healthy sleep patterns",
@@ -5600,7 +5600,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Helps maintain a positive mood",
     "Variations": [
       "1. Supports emotional well-being",
@@ -5616,7 +5616,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Contributes to emotional balance and general wellbeing",
     "Variations": [
       "1. Supports emotional equilibrium and overall wellness",
@@ -5632,7 +5632,7 @@
     ]
   },
   {
-    "Ingredient": "St. John’s Wort (Hypericum perforatum)",
+    "Ingredient": "St. John\u2019s Wort (Hypericum perforatum)",
     "Original": "Helps to support the relaxation and mental and physical well-being",
     "Variations": [
       "1. Contributes to promoting relaxation and overall well-being, both mentally and physically.",
@@ -6592,7 +6592,7 @@
     ]
   },
   {
-    "Ingredient": "Aloe Leaf Latex (Aloe vera folium – Bitter Latex)",
+    "Ingredient": "Aloe Leaf Latex (Aloe vera folium \u2013 Bitter Latex)",
     "Original": "Banned since 2021",
     "Variations": [
       "1. \"Prohibited as of 2021\"",
@@ -8929,7 +8929,7 @@
   },
   {
     "Ingredient": "Zinc Sulfate",
-    "Original": "Zinc contributes to normal acid‑base metabolism.",
+    "Original": "Zinc contributes to normal acid\u2011base metabolism.",
     "Variations": [
       "1. Zinc supports healthy acid-base balance in the body.",
       "2. Adequate zinc intake helps maintain normal acid-base levels.",
@@ -9281,7 +9281,7 @@
   },
   {
     "Ingredient": "Vitamin A (Beta-Carotene)",
-    "Original": "Beta-carotene is a provitamin A source — its contribution depends on conversion to retinol.",
+    "Original": "Beta-carotene is a provitamin A source \u2014 its contribution depends on conversion to retinol.",
     "Variations": [
       "1. Beta-carotene serves as a precursor to vitamin A, with its effectiveness reliant on conversion to retinol.",
       "2. The potential of beta-carotene as a source of vitamin A hinges on its ability to convert to retinol.",
@@ -9297,7 +9297,7 @@
   },
   {
     "Ingredient": "Vitamin A (Beta-Carotene)",
-    "Original": "(Claims allowed only for “Vitamin A” as above — not directly for beta-carotene unless conversion is demonstrated.)",
+    "Original": "(Claims allowed only for \u201cVitamin A\u201d as above \u2014 not directly for beta-carotene unless conversion is demonstrated.)",
     "Variations": [
       "1. \"Supports normal vision with Vitamin A intake.\"",
       "2. \"Vitamin A contributes to the maintenance of normal vision.\"",
@@ -9425,7 +9425,7 @@
   },
   {
     "Ingredient": "Selenium Yeast",
-    "Original": "(Claims only allowed if selenium content is provable — same as elemental selenium)",
+    "Original": "(Claims only allowed if selenium content is provable \u2014 same as elemental selenium)",
     "Variations": [
       "1. Selenium contributes to the maintenance of normal hair and nails.",
       "2. Selenium supports the normal function of the immune system.",
@@ -9761,7 +9761,7 @@
   },
   {
     "Ingredient": "Vitamin B12 (Cyanocobalamin)",
-    "Original": "Vitamin B12 (Cyanocobalamin): Vitamin B12 contributes to normal energy‑yielding metabolism.",
+    "Original": "Vitamin B12 (Cyanocobalamin): Vitamin B12 contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. \"Cyanocobalamin (Vitamin B12) supports normal energy metabolism.\"",
       "2. \"Vitamin B12 aids in the body's energy production process.\"",
@@ -9841,7 +9841,7 @@
   },
   {
     "Ingredient": "Vitamin B12 (Methylcobalamin)",
-    "Original": "Vitamin B12 (Methylcobalamin): Vitamin B12 contributes to normal energy‑yielding metabolism.",
+    "Original": "Vitamin B12 (Methylcobalamin): Vitamin B12 contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Methylcobalamin (Vitamin B12) supports normal energy production in the body.",
       "2. Vitamin B12 (Methylcobalamin) aids in the maintenance of a healthy metabolism.",
@@ -9953,7 +9953,7 @@
   },
   {
     "Ingredient": "Copper Sulfate",
-    "Original": "Copper contributes to normal energy‑yielding metabolism.",
+    "Original": "Copper contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Copper supports the body's energy production process.",
       "2. Adequate copper intake aids in maintaining normal metabolism.",
@@ -9969,7 +9969,7 @@
   },
   {
     "Ingredient": "Manganese Sulfate",
-    "Original": "Manganese contributes to normal energy‑yielding metabolism.",
+    "Original": "Manganese contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Manganese supports the body's energy-yielding metabolism.",
       "2. Adequate manganese intake helps maintain normal energy metabolism.",
@@ -10209,7 +10209,7 @@
   },
   {
     "Ingredient": "5-Methyltetrahydrofolate",
-    "Original": "Folic acid (5‑MTHF) contributes to normal blood formation.",
+    "Original": "Folic acid (5\u2011MTHF) contributes to normal blood formation.",
     "Variations": [
       "1. Folic acid (5-MTHF) supports healthy blood formation.",
       "2. Including folic acid (5-MTHF) in your diet helps maintain normal blood production.",
@@ -10225,23 +10225,23 @@
   },
   {
     "Ingredient": "5-Methyltetrahydrofolate",
-    "Original": "Folic acid (5‑MTHF) contributes to reduction of tiredness and fatigue.",
+    "Original": "Folic acid (5\u2011MTHF) contributes to reduction of tiredness and fatigue.",
     "Variations": [
-      "1. Folic acid (5‑MTHF) supports the reduction of tiredness and fatigue.",
-      "2. Including folic acid (5‑MTHF) in your diet may help reduce tiredness and fatigue.",
-      "3. Folic acid (5‑MTHF) plays a role in combating tiredness and fatigue.",
-      "4. Consumption of folic acid (5‑MTHF) can contribute to lessening tiredness and fatigue.",
-      "5. Folic acid (5‑MTHF) is linked to the reduction of tiredness and fatigue.",
-      "6. Adequate intake of folic acid (5‑MTHF) may assist in reducing tiredness and fatigue.",
-      "7. Folic acid (5‑MTHF) plays a part in combating tiredness and fatigue.",
-      "8. Including folic acid (5‑MTHF) in your daily routine may help in reducing tiredness and fatigue.",
-      "9. Folic acid (5‑MTHF) may contribute to the alleviation of tiredness and fatigue.",
-      "10. Consumption of folic acid (5‑MTHF) may be beneficial in reducing tiredness and fatigue."
+      "1. Folic acid (5\u2011MTHF) supports the reduction of tiredness and fatigue.",
+      "2. Including folic acid (5\u2011MTHF) in your diet may help reduce tiredness and fatigue.",
+      "3. Folic acid (5\u2011MTHF) plays a role in combating tiredness and fatigue.",
+      "4. Consumption of folic acid (5\u2011MTHF) can contribute to lessening tiredness and fatigue.",
+      "5. Folic acid (5\u2011MTHF) is linked to the reduction of tiredness and fatigue.",
+      "6. Adequate intake of folic acid (5\u2011MTHF) may assist in reducing tiredness and fatigue.",
+      "7. Folic acid (5\u2011MTHF) plays a part in combating tiredness and fatigue.",
+      "8. Including folic acid (5\u2011MTHF) in your daily routine may help in reducing tiredness and fatigue.",
+      "9. Folic acid (5\u2011MTHF) may contribute to the alleviation of tiredness and fatigue.",
+      "10. Consumption of folic acid (5\u2011MTHF) may be beneficial in reducing tiredness and fatigue."
     ]
   },
   {
     "Ingredient": "5-Methyltetrahydrofolate",
-    "Original": "Folic acid (5‑MTHF) contributes to normal homocysteine metabolism.",
+    "Original": "Folic acid (5\u2011MTHF) contributes to normal homocysteine metabolism.",
     "Variations": [
       "1. Folic acid (5-MTHF) supports healthy homocysteine levels.",
       "2. Folic acid (5-MTHF) aids in the metabolism of homocysteine.",
@@ -10257,7 +10257,7 @@
   },
   {
     "Ingredient": "Biotin",
-    "Original": "Biotin contributes to normal energy‑yielding metabolism.",
+    "Original": "Biotin contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Biotin supports a healthy energy-yielding metabolism.",
       "2. Biotin aids in the maintenance of normal energy production in the body.",
@@ -10497,7 +10497,7 @@
   },
   {
     "Ingredient": "Pantothenic Acid",
-    "Original": "Pantothenic acid contributes to normal energy‑yielding metabolism.",
+    "Original": "Pantothenic acid contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Pantothenic acid supports the body's energy-yielding metabolism.",
       "2. Pantothenic acid plays a role in maintaining normal energy production.",
@@ -10529,7 +10529,7 @@
   },
   {
     "Ingredient": "Niacin",
-    "Original": "Niacin contributes to normal energy‑yielding metabolism.",
+    "Original": "Niacin contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. \"Niacin supports the body's energy production process.\"",
       "2. \"Niacin aids in maintaining a normal metabolism for energy.\"",
@@ -10625,7 +10625,7 @@
   },
   {
     "Ingredient": "Riboflavin",
-    "Original": "Riboflavin contributes to normal energy‑yielding metabolism.",
+    "Original": "Riboflavin contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. \"Riboflavin supports the body's natural energy production process.\"",
       "2. \"Riboflavin plays a role in maintaining normal metabolism for energy production.\"",
@@ -10705,7 +10705,7 @@
   },
   {
     "Ingredient": "Thiamine Hydrochloride",
-    "Original": "Thiamine contributes to normal energy‑yielding metabolism.",
+    "Original": "Thiamine contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. Thiamine supports normal energy production in the body.",
       "2. Thiamine aids in the body's natural energy metabolism.",
@@ -10769,55 +10769,55 @@
   },
   {
     "Ingredient": "Choline Bitartrate",
-    "Original": "Choline contributes to the maintenance of normal liver function – ≥82.5 mg choline per serving.",
+    "Original": "Choline contributes to the maintenance of normal liver function \u2013 \u226582.5 mg choline per serving.",
     "Variations": [
-      "1. Choline supports healthy liver function when consumed at ≥82.5 mg per serving.",
-      "2. Adequate intake of choline, at levels of ≥82.5 mg per serving, helps maintain normal liver function.",
-      "3. Consuming choline at a level of ≥82.5 mg per serving can support the health of the liver.",
-      "4. Choline, at a dosage of ≥82.5 mg per serving, plays a role in maintaining normal liver function.",
-      "5. Adequate choline intake, at levels of ≥82.5 mg per serving, contributes to the health of the liver.",
-      "6. Choline, when consumed at ≥82.5 mg per serving, supports the maintenance of normal liver function.",
-      "7. Meeting the recommended intake of choline, at levels of ≥82.5 mg per serving, can benefit liver health.",
-      "8. Choline, at a dosage of ≥82.5 mg per serving, aids in the maintenance of normal liver function.",
-      "9. Adequate choline consumption, at levels of ≥82.5 mg per serving, helps support liver health.",
-      "10. Choline contributes to the normal functioning of the liver when consumed at a level of ≥82.5 mg per serving."
+      "1. Choline supports healthy liver function when consumed at \u226582.5 mg per serving.",
+      "2. Adequate intake of choline, at levels of \u226582.5 mg per serving, helps maintain normal liver function.",
+      "3. Consuming choline at a level of \u226582.5 mg per serving can support the health of the liver.",
+      "4. Choline, at a dosage of \u226582.5 mg per serving, plays a role in maintaining normal liver function.",
+      "5. Adequate choline intake, at levels of \u226582.5 mg per serving, contributes to the health of the liver.",
+      "6. Choline, when consumed at \u226582.5 mg per serving, supports the maintenance of normal liver function.",
+      "7. Meeting the recommended intake of choline, at levels of \u226582.5 mg per serving, can benefit liver health.",
+      "8. Choline, at a dosage of \u226582.5 mg per serving, aids in the maintenance of normal liver function.",
+      "9. Adequate choline consumption, at levels of \u226582.5 mg per serving, helps support liver health.",
+      "10. Choline contributes to the normal functioning of the liver when consumed at a level of \u226582.5 mg per serving."
     ]
   },
   {
     "Ingredient": "Choline Bitartrate",
-    "Original": "Choline contributes to normal lipid metabolism – ≥82.5 mg choline per serving.",
+    "Original": "Choline contributes to normal lipid metabolism \u2013 \u226582.5 mg choline per serving.",
     "Variations": [
-      "1. Choline supports normal lipid metabolism when consumed at a level of ≥82.5 mg per serving.",
-      "2. Adequate intake of choline, at a level of ≥82.5 mg per serving, helps maintain normal lipid metabolism.",
-      "3. Including ≥82.5 mg of choline per serving supports the body's natural lipid metabolism.",
-      "4. Choline, at a level of ≥82.5 mg per serving, contributes to the maintenance of normal lipid metabolism.",
-      "5. Consumption of choline at a level of ≥82.5 mg per serving assists in supporting normal lipid metabolism.",
-      "6. Adequate choline intake, at ≥82.5 mg per serving, plays a role in maintaining normal lipid metabolism.",
-      "7. Choline, when consumed at a level of ≥82.5 mg per serving, helps to support normal lipid metabolism.",
-      "8. Including ≥82.5 mg of choline per serving in your diet can contribute to normal lipid metabolism.",
-      "9. Choline, at a level of ≥82.5 mg per serving, is beneficial for supporting normal lipid metabolism.",
-      "10. Adequate consumption of choline, at a level of ≥82.5 mg per serving, can help maintain normal lipid metabolism."
+      "1. Choline supports normal lipid metabolism when consumed at a level of \u226582.5 mg per serving.",
+      "2. Adequate intake of choline, at a level of \u226582.5 mg per serving, helps maintain normal lipid metabolism.",
+      "3. Including \u226582.5 mg of choline per serving supports the body's natural lipid metabolism.",
+      "4. Choline, at a level of \u226582.5 mg per serving, contributes to the maintenance of normal lipid metabolism.",
+      "5. Consumption of choline at a level of \u226582.5 mg per serving assists in supporting normal lipid metabolism.",
+      "6. Adequate choline intake, at \u226582.5 mg per serving, plays a role in maintaining normal lipid metabolism.",
+      "7. Choline, when consumed at a level of \u226582.5 mg per serving, helps to support normal lipid metabolism.",
+      "8. Including \u226582.5 mg of choline per serving in your diet can contribute to normal lipid metabolism.",
+      "9. Choline, at a level of \u226582.5 mg per serving, is beneficial for supporting normal lipid metabolism.",
+      "10. Adequate consumption of choline, at a level of \u226582.5 mg per serving, can help maintain normal lipid metabolism."
     ]
   },
   {
     "Ingredient": "Choline Bitartrate",
-    "Original": "Choline contributes to normal homocysteine metabolism – ≥82.5 mg choline per serving",
+    "Original": "Choline contributes to normal homocysteine metabolism \u2013 \u226582.5 mg choline per serving",
     "Variations": [
       "1. Choline supports the body's normal homocysteine metabolism when consumed in amounts of at least 82.5 mg per serving.",
-      "2. Consumption of ≥82.5 mg of choline per serving aids in maintaining normal homocysteine metabolism.",
-      "3. Choline, at a level of ≥82.5 mg per serving, plays a role in supporting the body's homocysteine metabolism.",
-      "4. Adequate intake of choline (≥82.5 mg per serving) is linked to normal homocysteine metabolism.",
-      "5. Choline contributes to the maintenance of normal homocysteine metabolism when consumed at levels of ≥82.5 mg per serving.",
+      "2. Consumption of \u226582.5 mg of choline per serving aids in maintaining normal homocysteine metabolism.",
+      "3. Choline, at a level of \u226582.5 mg per serving, plays a role in supporting the body's homocysteine metabolism.",
+      "4. Adequate intake of choline (\u226582.5 mg per serving) is linked to normal homocysteine metabolism.",
+      "5. Choline contributes to the maintenance of normal homocysteine metabolism when consumed at levels of \u226582.5 mg per serving.",
       "6. The presence of at least 82.5 mg of choline per serving assists in normalizing homocysteine metabolism.",
-      "7. Choline, in amounts of ≥82.5 mg per serving, helps support the body's homocysteine metabolism.",
-      "8. Consuming choline at levels of ≥82.5 mg per serving is associated with normal homocysteine metabolism.",
-      "9. Choline intake of ≥82.5 mg per serving aids in the maintenance of normal homocysteine metabolism.",
-      "10. Adequate choline consumption (≥82.5 mg per serving) is connected to supporting normal homocysteine metabolism in the body."
+      "7. Choline, in amounts of \u226582.5 mg per serving, helps support the body's homocysteine metabolism.",
+      "8. Consuming choline at levels of \u226582.5 mg per serving is associated with normal homocysteine metabolism.",
+      "9. Choline intake of \u226582.5 mg per serving aids in the maintenance of normal homocysteine metabolism.",
+      "10. Adequate choline consumption (\u226582.5 mg per serving) is connected to supporting normal homocysteine metabolism in the body."
     ]
   },
   {
     "Ingredient": "Phosphorus",
-    "Original": "Phosphorus contributes to normal energy‑yielding metabolism.",
+    "Original": "Phosphorus contributes to normal energy\u2011yielding metabolism.",
     "Variations": [
       "1. \"Phosphorus supports the body's natural energy metabolism.\"",
       "2. \"Phosphorus plays a role in maintaining normal energy production in the body.\"",
@@ -10909,6 +10909,49 @@
       "8. Assists in maintaining normal blood cholesterol levels",
       "9. Supports healthy blood cholesterol level maintenance",
       "10. Helps sustain normal blood cholesterol levels in the body"
+    ]
+  },
+  {
+    "Ingredient": "Algal Oil",
+    "Original": "Approved DHA/EPA claims: normal brain, vision, heart function (conditions apply). DHA contributes to the maintenance of normal brain function. Requires \u2265 250 mg DHA/day from all sources.",
+    "Variations": [
+      "DHA/EPA supports normal brain, vision, and heart function (conditions apply). DHA contributes to the maintenance of normal brain function. Requires \u2265 250 mg DHA/day from all sources.",
+      "DHA and EPA contribute to normal brain, vision, and heart function (conditions apply). DHA helps maintain normal brain function. Requires \u2265 250 mg DHA/day from all sources.",
+      "DHA/EPA claims: normal brain, vision, heart function (conditions apply). DHA contributes to the maintenance of normal brain function. Requires \u2265 250 mg DHA/day from all sources.",
+      "DHA and EPA support normal brain, vision, and heart function (conditions apply). DHA contributes to the maintenance of normal brain function. Requires \u2265 250 mg DHA/day from all sources."
+    ]
+  },
+  {
+    "Ingredient": "Algal Oil",
+    "Original": "DHA contributes to the maintenance of normal vision. Requires \u2265 250 mg DHA/day.",
+    "Variations": [
+      "DHA helps maintain normal vision. Requires \u2265 250 mg DHA/day.",
+      "DHA contributes to the maintenance of normal vision. Requires \u2265 250 mg DHA/day.",
+      "DHA supports normal vision. Requires \u2265 250 mg DHA/day.",
+      "DHA helps maintain normal vision. Requires \u2265 250 mg DHA/day.",
+      "DHA contributes to normal vision. Requires \u2265 250 mg DHA/day."
+    ]
+  },
+  {
+    "Ingredient": "Algal Oil",
+    "Original": "EPA and DHA contribute to the normal function of the heart. Requires \u2265 250 mg EPA+DHA/day.",
+    "Variations": [
+      "EPA and DHA help maintain normal heart function. Requires \u2265 250 mg EPA+DHA/day.",
+      "EPA and DHA contribute to normal heart function. Requires \u2265 250 mg EPA+DHA/day.",
+      "EPA and DHA support normal heart function. Requires \u2265 250 mg EPA+DHA/day.",
+      "EPA and DHA help maintain normal heart function. Requires \u2265 250 mg EPA+DHA/day.",
+      "EPA and DHA contribute to the normal function of the heart. Requires \u2265 250 mg EPA+DHA/day."
+    ]
+  },
+  {
+    "Ingredient": "Algal Oil",
+    "Original": "DHA intake contributes to the normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet.",
+    "Variations": [
+      "DHA intake helps normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet.",
+      "DHA intake contributes to normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet.",
+      "DHA intake supports normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet.",
+      "DHA intake helps normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet.",
+      "DHA intake contributes to the normal visual development of infants up to 12 months of age. Requires 100 mg DHA/day in total diet."
     ]
   }
 ]
